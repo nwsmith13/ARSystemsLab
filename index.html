@@ -1021,7 +1021,9 @@
 <input type="hidden" name="source" value="AR Systems Lab Website">
 <input type="hidden" name="Submitted At" id="submittedAt">
 <textarea name="Lead Summary" id="leadSummary" hidden></textarea>
-
+<input type="hidden" name="_replyto" value="">
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="_gotcha" style="display:none">
   <div class="form-field floating-field">
     <input id="name" name="name" type="text" placeholder=" " required>
     <label for="name">Name*</label>
@@ -1305,6 +1307,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const submittedAt = new Date().toLocaleString();
     const submittedAtField = document.getElementById("submittedAt");
     const summaryField = document.getElementById("leadSummary");
+	const email = form.querySelector('[name="email"]')?.value.trim() || "";
+    const replyToField = form.querySelector('[name="_replyto"]');
+
+if (replyToField) {
+  replyToField.value = email;
+}
 
     if (submittedAtField) {
       submittedAtField.value = submittedAt;
