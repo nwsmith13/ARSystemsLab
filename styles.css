@@ -80,7 +80,6 @@ img {
   background: rgba(5, 8, 18, 0.72);
   border-bottom: 1px solid rgba(116, 135, 190, 0.14);
 
-  padding: 0.6rem 0; /* 👈 NEW */
 }
 
 .nav {
@@ -425,7 +424,7 @@ p {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 
 .section-alt {
@@ -698,7 +697,7 @@ a {
 
 /*Logo*/
 .logo {
-  height: 56px; /* 👈 main size */
+
   width: auto;
   display: block;
 }
@@ -711,6 +710,25 @@ a {
   font-weight: 700;
   letter-spacing: 0.08em;
   font-size: 0.9rem;
+}
+.logo-full {
+  display: inline;
+
+  transition: all 0.3s ease;
+}
+
+.logo-compact {
+  display: none;
+  height: 32px;
+  transition: all 0.3s ease;
+}
+
+header.scrolled .logo-full {
+  display: none;
+}
+
+header.scrolled .logo-compact {
+  display: inline;
 }
 
 /*Serice Icons*/
@@ -1303,7 +1321,6 @@ animation: tickerFloat 4s ease-in-out infinite;
   0% { transform: translateY(0); }
   50% { transform: translateY(-1px); }
   100% { transform: translateY(0); }
-}
 }
 
 .mockup-ticker strong {
@@ -2942,4 +2959,657 @@ animation: tickerFloat 4s ease-in-out infinite;
 
 .floating-field select option {
   color: #000;
+}
+.examples-section {
+  position: relative;
+  background:
+    radial-gradient(circle at 80% 15%, rgba(83, 53, 248, 0.16), transparent 32%),
+    radial-gradient(circle at 18% 70%, rgba(51, 199, 255, 0.10), transparent 30%),
+    linear-gradient(180deg, rgba(18, 27, 55, 0.98), rgba(7, 12, 25, 0.96));
+  border-top: 1px solid rgba(124, 143, 190, 0.14);
+  border-bottom: 1px solid rgba(124, 143, 190, 0.14);
+}
+
+/* ================================
+   Updated example mockup contrast
+   Light mockup panels with dark individual rows/cards
+   ================================ */
+
+/* Keep the outer project cards in the site theme, but make the actual software mockups stand out. */
+.project-card {
+  background: linear-gradient(180deg, rgba(16, 23, 46, 0.92) 0%, rgba(10, 15, 31, 0.86) 100%);
+  border: 1px solid rgba(124, 143, 190, 0.22);
+  color: var(--text);
+}
+
+.project-card.featured {
+  background:
+    linear-gradient(180deg, rgba(18, 27, 55, 0.98) 0%, rgba(9, 14, 28, 0.94) 100%),
+    radial-gradient(circle at top right, rgba(51, 199, 255, 0.12), transparent 28%);
+}
+
+.project-card h3,
+.project-card p {
+  color: inherit;
+}
+
+.project-card p {
+  color: var(--muted);
+}
+
+.project-outcome {
+  color: #dce6ff;
+}
+
+/* This is the white/light software preview area inside each project card. */
+.project-mockup {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f7ff 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.project-card:hover .project-mockup {
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.mockup-mini-header,
+.project-mockup-label {
+  color: #3855d6;
+}
+
+.project-scoreboard-head h4,
+.project-score-total strong {
+  color: #071126;
+}
+
+.project-score-total span,
+.project-score-footer span {
+  color: #64708a;
+}
+
+.project-score-total strong {
+  color: #3846e8;
+}
+
+/* Pills inside light mockups */
+.mockup-chip {
+  color: #ffffff;
+  background: linear-gradient(135deg, #16215a, #10172f);
+  border-color: rgba(15, 23, 42, 0.12);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.16);
+}
+
+.mockup-chip.muted {
+  color: #ffffff;
+  background: linear-gradient(135deg, #111827, #17213b);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+/* Leaderboard rows: individual dark backgrounds inside the light mockup */
+.project-card .mockup-list {
+  margin: 1.1rem 0;
+}
+
+.project-card .mockup-row {
+  background: linear-gradient(135deg, #0b1226 0%, #121b34 100%);
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 8px 18px rgba(15, 23, 42, 0.18);
+}
+
+.project-card .mockup-row:hover {
+  background: linear-gradient(135deg, #111b38 0%, #172246 100%);
+  border-color: rgba(83, 53, 248, 0.28);
+}
+
+.project-card .mockup-row.is-first {
+  background: linear-gradient(135deg, #0d1733 0%, #162655 100%);
+  border-color: rgba(83, 53, 248, 0.28);
+}
+
+.project-card .mockup-person strong,
+.project-card .mockup-score {
+  color: #f8fbff;
+}
+
+.project-card .mockup-person span {
+  color: rgba(226, 232, 255, 0.72);
+}
+
+.project-score-footer {
+  border-top-color: rgba(15, 23, 42, 0.12);
+}
+
+.project-score-footer strong {
+  color: #0f172a;
+}
+
+/* CRM dashboard in a light shell with readable light stats and dark project rows */
+.mock-crm-stat {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+.mock-crm-stat span,
+.mock-health-label {
+  color: #65718b;
+}
+
+.mock-crm-stat strong {
+  color: #0f172a;
+}
+
+.mock-health-bar {
+  background: rgba(15, 23, 42, 0.10);
+}
+
+.mock-crm-item {
+  background: linear-gradient(135deg, #0b1226 0%, #121b34 100%);
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.16);
+}
+
+.mock-crm-item strong {
+  color: #ffffff;
+}
+
+.mock-crm-item div span {
+  color: rgba(226, 232, 255, 0.72);
+}
+
+.mock-toolbar-btn.ghost {
+  color: #17213b;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+}
+
+/* AI assistant: light mockup, dark message cards */
+.mock-ai-pill.muted {
+  color: #17213b;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+}
+
+.mock-ai-msg {
+  background: linear-gradient(135deg, #0b1226 0%, #121b34 100%);
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14);
+}
+
+.mock-ai-msg.user {
+  background: linear-gradient(135deg, #16215a, #15396f);
+  border-color: rgba(83, 53, 248, 0.22);
+}
+
+.mock-ai-msg p {
+  color: #eef4ff;
+}
+
+/* Training dashboard: light shell, dark lesson rows */
+.mock-training-hero {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+.mock-training-hero strong {
+  color: #0f172a;
+}
+
+.mock-training-progress span,
+.mock-training-meta {
+  color: #65718b;
+}
+
+.mock-training-progress-bar {
+  background: rgba(15, 23, 42, 0.10);
+}
+
+.mock-training-item {
+  background: linear-gradient(135deg, #0b1226 0%, #121b34 100%);
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14);
+}
+
+.mock-training-item strong {
+  color: #ffffff;
+}
+
+.mock-training-item div span {
+  color: rgba(226, 232, 255, 0.72);
+}
+
+.mock-training-certificate {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.14), rgba(16, 185, 129, 0.09));
+  border-color: rgba(34, 197, 94, 0.26);
+}
+
+.mock-training-certificate strong {
+  color: #064e3b;
+}
+
+.mock-training-certificate span {
+  color: #047857;
+}
+
+/* Better mobile behavior for detailed mockups */
+@media (max-width: 760px) {
+  .project-mockup {
+    padding: 0.85rem;
+  }
+
+  .project-card .mockup-row,
+  .mock-crm-item,
+  .mock-training-item {
+    grid-template-columns: 42px 1fr auto;
+  }
+
+  .mock-crm-item,
+  .mock-training-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mock-crm-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+
+/* ================================
+   Visual polish pass: examples section
+   - softer leaderboard scroll edge
+   - stronger CRM dashboard header area
+   - brighter project status badges
+   ================================ */
+
+/* Reduce the heavy white fade/glow at the top and bottom of the scrolling leaderboard. */
+.project-card .mockup-list {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 3%, black 97%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 3%, black 97%, transparent 100%);
+}
+
+/* Give the CRM dashboard title area more presence so the top-left doesn't feel empty. */
+.project-mockup .mockup-mini-header {
+  font-size: 0.95rem;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: 0.10em;
+  color: #3855d6;
+  margin-bottom: 0.25rem;
+}
+
+.mockup-mini-subtitle {
+  margin: 0 0 0.85rem;
+  color: #64708a;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  max-width: 32ch;
+}
+
+.mock-crm-toolbar {
+  margin-top: -2.15rem;
+}
+
+/* Brighter, more noticeable health/status badges. */
+.mock-status.good {
+  color: #ecfdf5;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.95), rgba(16, 185, 129, 0.76));
+  border: 1px solid rgba(134, 239, 172, 0.45);
+  box-shadow: 0 0 14px rgba(34, 197, 94, 0.28);
+}
+
+.mock-status.warn {
+  color: #fff7ed;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.95), rgba(217, 119, 6, 0.76));
+  border: 1px solid rgba(253, 186, 116, 0.45);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.25);
+}
+
+.mock-status.risk {
+  color: #fff1f2;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.98), rgba(190, 18, 60, 0.78));
+  border: 1px solid rgba(252, 165, 165, 0.48);
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.28);
+}
+
+/* Make the View Details buttons separate cleanly from brighter badges. */
+.mock-detail-btn {
+  color: #eef4ff;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(226, 232, 255, 0.20);
+}
+
+@media (max-width: 760px) {
+  .mock-crm-toolbar {
+    margin-top: 0;
+    justify-content: flex-start;
+  }
+
+  .mockup-mini-subtitle {
+    max-width: none;
+  }
+}
+
+/* ================================
+   Status polish pass: unified active states
+   - brighter AI Agent Active badge
+   - brighter Training In Progress badge
+   - more prominent certificate reward card
+   - consistent CRM status signal styling
+   ================================ */
+
+/* AI active badge: readable, high-contrast, and clearly "live" */
+.mock-ai-pill:not(.muted) {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 32px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  color: #052e1a;
+  background: linear-gradient(135deg, #bbf7d0 0%, #4ade80 48%, #22c55e 100%);
+  border: 1px solid rgba(22, 163, 74, 0.55);
+  box-shadow:
+    0 0 0 1px rgba(34, 197, 94, 0.20),
+    0 6px 18px rgba(34, 197, 94, 0.26),
+    0 0 22px rgba(34, 197, 94, 0.24);
+}
+
+.mock-ai-pill:not(.muted)::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #15803d;
+  box-shadow: 0 0 10px rgba(21, 128, 61, 0.85);
+  animation: statusPulse 1.8s ease-in-out infinite;
+}
+
+.mock-ai-pill.muted {
+  min-height: 32px;
+  color: #172033;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+/* Training module status: blue active state with enough contrast to read clearly */
+.mock-training-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 32px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  color: #eff6ff;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 48%, #38bdf8 100%);
+  border: 1px solid rgba(147, 197, 253, 0.55);
+  box-shadow:
+    0 0 0 1px rgba(59, 130, 246, 0.18),
+    0 6px 18px rgba(59, 130, 246, 0.26),
+    0 0 20px rgba(56, 189, 248, 0.20);
+}
+
+.mock-training-badge::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #dbeafe;
+  box-shadow: 0 0 10px rgba(191, 219, 254, 0.9);
+  animation: statusPulse 1.8s ease-in-out infinite;
+}
+
+/* Certificate: make it read like a reward/milestone, not a muted info row */
+.mock-training-certificate {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 1.05rem;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 90% 15%, rgba(255, 255, 255, 0.42), transparent 24%),
+    linear-gradient(135deg, rgba(187, 247, 208, 0.98), rgba(74, 222, 128, 0.84), rgba(34, 197, 94, 0.72));
+  border: 1px solid rgba(22, 163, 74, 0.40);
+  box-shadow:
+    0 14px 34px rgba(34, 197, 94, 0.26),
+    0 0 0 1px rgba(34, 197, 94, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+.mock-training-certificate::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.24), transparent);
+  transform: translateX(-120%);
+  animation: certSweep 5.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.mock-cert-icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  border: 1px solid rgba(240, 253, 244, 0.65);
+  box-shadow:
+    0 0 14px rgba(34, 197, 94, 0.52),
+    inset 0 1px 0 rgba(255, 255, 255, 0.26);
+}
+
+.mock-training-certificate strong {
+  color: #063f27;
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.mock-training-certificate span {
+  color: #065f46;
+  font-weight: 700;
+}
+
+/* Shared brighter status system for CRM/project statuses */
+.mock-status {
+  min-height: 30px;
+  padding: 0.28rem 0.75rem;
+  font-weight: 900;
+}
+
+.mock-status.good {
+  color: #ecfdf5;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  border: 1px solid rgba(134, 239, 172, 0.58);
+  box-shadow:
+    0 0 0 1px rgba(34, 197, 94, 0.14),
+    0 0 16px rgba(34, 197, 94, 0.36);
+}
+
+.mock-status.warn {
+  color: #fff7ed;
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+  border: 1px solid rgba(253, 186, 116, 0.62);
+  box-shadow:
+    0 0 0 1px rgba(245, 158, 11, 0.14),
+    0 0 16px rgba(245, 158, 11, 0.34);
+}
+
+.mock-status.risk {
+  color: #fff1f2;
+  background: linear-gradient(135deg, #be123c, #ef4444);
+  border: 1px solid rgba(252, 165, 165, 0.64);
+  box-shadow:
+    0 0 0 1px rgba(239, 68, 68, 0.14),
+    0 0 16px rgba(239, 68, 68, 0.36);
+}
+
+@keyframes statusPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.35); opacity: 0.62; }
+}
+
+@keyframes certSweep {
+  0%, 72% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
+}
+
+/* =========================================================
+   V4 polish overrides: clearer solid status system
+   ========================================================= */
+
+/* AI badge: solid green with white text */
+.mock-ai-pill:not(.muted) {
+  color: #ffffff;
+  background: #16a34a;
+  border: 1px solid #15803d;
+  box-shadow:
+    0 4px 12px rgba(22, 163, 74, 0.34),
+    0 0 14px rgba(22, 163, 74, 0.34);
+}
+
+.mock-ai-pill:not(.muted)::before {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
+}
+
+/* CRM toolbar: remove gradient from New Project button */
+.mock-toolbar-btn.primary {
+  color: #ffffff;
+  background: #2563eb;
+  border: 1px solid #1d4ed8;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.28);
+}
+
+/* Training top badge: solid blue with white text */
+.mock-training-badge {
+  color: #ffffff;
+  background: #2563eb;
+  border: 1px solid #1d4ed8;
+  box-shadow:
+    0 4px 12px rgba(37, 99, 235, 0.34),
+    0 0 14px rgba(37, 99, 235, 0.28);
+}
+
+.mock-training-badge::before {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
+}
+
+/* Training lesson status pills: brighter, clearer state colors */
+.mock-training-item.complete .mock-training-status {
+  color: #ffffff;
+  background: #16a34a;
+  border: 1px solid #15803d;
+  box-shadow: 0 4px 10px rgba(22, 163, 74, 0.32);
+}
+
+.mock-training-item.active .mock-training-status {
+  color: #ffffff;
+  background: #2563eb;
+  border: 1px solid #1d4ed8;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.32);
+}
+
+.mock-training-status.muted {
+  color: #ffffff;
+  background: #475569;
+  border: 1px solid #64748b;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.24);
+}
+
+/* Completion certificate: solid green, white text */
+.mock-training-certificate {
+  background: #16a34a;
+  border: 1px solid #15803d;
+  color: #ffffff;
+  box-shadow:
+    0 12px 28px rgba(22, 163, 74, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.mock-training-certificate::after {
+  display: none;
+}
+
+.mock-cert-icon {
+  color: #16a34a;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.28);
+}
+
+.mock-training-certificate strong,
+.mock-training-certificate span {
+  color: #ffffff;
+}
+
+.mock-training-certificate span {
+  opacity: 0.9;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.3),
+    0 0 12px rgba(99,102,241,0.4);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+
+  z-index: 1000;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 30px rgba(0,0,0,0.4),
+    0 0 16px rgba(99,102,241,0.6);
 }
