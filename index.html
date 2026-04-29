@@ -1253,7 +1253,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggle.innerHTML = widget.classList.contains("open")
       ? "✕"
-      : '<i data-lucide="sparkles"></i>';
+      : '<i data-lucide="info"></i>';
 
     lucide.createIcons();
   });
@@ -1266,7 +1266,7 @@ document.addEventListener("DOMContentLoaded", () => {
       responseBox.innerHTML = `
         <strong>Recommended starting point</strong>
         <p>${item.response}</p>
-        <button class="assistant-cta" data-start="${choice}">Start here →</button>
+        <button class="assistant-cta" data-start="${choice}">Start with this →</button>
       `;
     });
   });
