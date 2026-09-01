@@ -20373,3 +20373,8 @@ li,
 
 /* The cropped RECAP capture keeps both operational panels visible in its browser frame. */
 .work-card-recap .recap-visual img{object-fit:contain;object-position:center;background:#f3f5fa}
+
+/* RECAP's 1375:562 desktop capture is a full-width browser presentation, not a portrait panel. */
+.work-card-recap{display:flex;flex-direction:column;min-height:0}.work-card-recap .recap-visual{height:auto;min-height:0;padding:16px;flex:none}.work-card-recap .app-frame{height:auto}.work-card-recap .recap-visual img{display:block;width:100%;height:auto;aspect-ratio:1375/562;object-fit:contain;object-position:center;background:transparent}.work-card-recap .recap-copy{display:block}.work-card-recap .recap-copy ul{margin-bottom:0}
+@media(min-width:760px){.work-card-recap .recap-visual{height:auto;min-height:0;padding:20px}.work-card-recap .recap-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(175px,.55fr);align-items:center;gap:22px}.work-card-recap .recap-copy ul{justify-content:flex-end;margin:0}}
+@media(min-width:1040px){.work-card-recap{display:flex;min-height:0;grid-template-columns:none}.work-card-recap .recap-visual{height:auto;min-height:0;padding:24px}.work-card-recap .recap-copy{padding:28px 34px 32px}}
