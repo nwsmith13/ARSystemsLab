@@ -20382,3 +20382,6 @@ li,
 /* RECAP micro-polish: match the shared project eyebrow and tighten its tag grouping. */
 .work-card-recap .recap-copy-main>p:first-child{margin:0 0 5px;text-transform:uppercase;letter-spacing:.14em;font-size:.69rem;font-weight:800;color:var(--c-purple)}.work-card-recap .recap-copy ul{margin-top:12px}
 @media(min-width:760px){.work-card-recap .recap-copy{gap:18px}.work-card-recap .recap-copy ul{margin-top:0}}
+
+/* Keep the custom connect footer aligned with the site's understated founder attribution. */
+.connect-footer p{display:flex;flex-wrap:wrap;gap:.25rem .45rem}.connect-founder-credit{white-space:nowrap;opacity:.78}

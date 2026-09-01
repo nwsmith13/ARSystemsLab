@@ -38,18 +38,16 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://www.arsosolutions.io/#organization",
       "name": "ARSO Solutions Lab",
-      "url": "https://www.arsosolutions.io",
+      "url": "https://www.arsosolutions.io/",
       "logo": "https://www.arsosolutions.io/Assets/logo-full.svg",
       "image": "https://www.arsosolutions.io/Assets/arso-social-preview.png",
       "description": "ARSO Solutions Lab designs AI-powered software, workflow automation, and operational systems that simplify complex business processes.",
       "foundingDate": "2026",
       "founder": {
-        "@id": "https://www.arsosolutions.io/#matthew-smith",
-        "@type": "Person",
-        "name": "Matthew Smith"
+        "@id": "https://www.arsosolutions.io/#matthew-smith"
       },
       "areaServed": {
         "@type": "Country",
@@ -69,12 +67,7 @@
       "@id": "https://www.arsosolutions.io/#matthew-smith",
       "name": "Matthew Smith",
       "jobTitle": "Founder",
-      "worksFor": {
-        "@id": "https://www.arsosolutions.io/#organization",
-        "@type": "Organization",
-        "name": "ARSO Solutions Lab",
-        "url": "https://www.arsosolutions.io"
-      }
+      "worksFor": { "@id": "https://www.arsosolutions.io/#organization" }
     }
   ]
 }
