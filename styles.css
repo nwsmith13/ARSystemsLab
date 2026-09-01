@@ -20378,3 +20378,7 @@ li,
 .work-card-recap{display:flex;flex-direction:column;min-height:0}.work-card-recap .recap-visual{height:auto;min-height:0;padding:16px;flex:none}.work-card-recap .app-frame{height:auto}.work-card-recap .recap-visual img{display:block;width:100%;height:auto;aspect-ratio:1375/562;object-fit:contain;object-position:center;background:transparent}.work-card-recap .recap-copy{display:block}.work-card-recap .recap-copy ul{margin-bottom:0}
 @media(min-width:760px){.work-card-recap .recap-visual{height:auto;min-height:0;padding:20px}.work-card-recap .recap-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(175px,.55fr);align-items:center;gap:22px}.work-card-recap .recap-copy ul{justify-content:flex-end;margin:0}}
 @media(min-width:1040px){.work-card-recap{display:flex;min-height:0;grid-template-columns:none}.work-card-recap .recap-visual{height:auto;min-height:0;padding:24px}.work-card-recap .recap-copy{padding:28px 34px 32px}}
+
+/* RECAP micro-polish: match the shared project eyebrow and tighten its tag grouping. */
+.work-card-recap .recap-copy-main>p:first-child{margin:0 0 5px;text-transform:uppercase;letter-spacing:.14em;font-size:.69rem;font-weight:800;color:var(--c-purple)}.work-card-recap .recap-copy ul{margin-top:12px}
+@media(min-width:760px){.work-card-recap .recap-copy{gap:18px}.work-card-recap .recap-copy ul{margin-top:0}}
