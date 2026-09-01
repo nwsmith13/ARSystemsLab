@@ -20360,3 +20360,16 @@ li,
 @media(min-width:1040px){.connect-hero-grid{grid-template-columns:minmax(0,1fr) 410px;gap:54px}.connect-signal-card{padding:38px 38px 32px}.signal-photo{width:122px;height:122px}.connect-signal-card dl div{padding:11px 0;font-size:.77rem}.signal-logo{margin-top:27px!important}.work-card-client{grid-template-columns:1.12fr .88fr}.work-card-client .client-ui{min-height:460px}}
 @media(max-width:759px){.work-card-client .client-ui{height:410px;min-height:410px}.client-ui .client-browser{width:80%;height:53%}.client-ui .client-phone{width:20%;height:48%}}
 @media(max-width:410px){.connect-signal-card{display:none}.work-card-client .client-ui{height:360px;min-height:360px}.client-ui .client-browser{width:84%;height:51%}.client-ui .client-browser-divine{left:3%}.client-ui .client-browser-drifty{right:3%}.client-ui .client-phone{width:22%;height:46%}.client-ui .client-phone-divine{right:3%}.client-ui .client-phone-drifty{left:3%}}
+
+/* RECAP uses a wide desktop application frame; OccuBoard retains its portrait preview. */
+.work-card-recap .recap-visual{height:270px;padding:16px;background:linear-gradient(145deg,#161b2f,#294b83)}.work-card-recap .app-frame{height:100%;border-color:rgba(255,255,255,.34);border-radius:10px}.work-card-recap .recap-visual img{height:calc(100% - 17px);object-fit:cover;object-position:54% 35%}
+@media(min-width:760px){.work-card-recap{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr)}.work-card-recap .recap-visual{height:340px;padding:20px}.work-card-recap .work-copy{align-self:center}}
+@media(min-width:1040px){.work-card-recap{grid-template-columns:minmax(0,1.7fr) minmax(315px,.7fr);min-height:390px}.work-card-recap .recap-visual{height:100%;min-height:390px;padding:24px}.work-card-recap .recap-visual img{object-position:54% 38%}}
+@media(max-width:759px){.work-card-recap .recap-visual{height:250px}.work-card-recap .recap-visual img{object-position:54% 34%}}
+
+/* Project-section grid: wide RECAP beside a protected portrait OccuBoard preview. */
+@media(min-width:760px) and (max-width:1039px){.work-grid{grid-template-columns:1fr}.work-card-recap,.work-card-client{grid-column:auto}}
+@media(min-width:1040px){.work-grid{grid-template-columns:minmax(0,2fr) minmax(290px,1fr);align-items:stretch}.work-card-recap{grid-column:auto;min-height:100%;grid-template-columns:minmax(0,1.5fr) minmax(225px,.7fr)}.work-card-occu{grid-column:auto;grid-template-columns:1fr;grid-template-rows:230px minmax(0,1fr);min-height:100%}.work-card-occu .work-visual{height:230px}.work-card-client{grid-column:1/-1}}
+
+/* The cropped RECAP capture keeps both operational panels visible in its browser frame. */
+.work-card-recap .recap-visual img{object-fit:contain;object-position:center;background:#f3f5fa}
